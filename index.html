@@ -9,22 +9,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Dancing+Script:wght@600;700&family=Lato:wght@300;400;700&family=Nunito:wght@300;400;500;600&family=Special+Elite&display=swap" rel="stylesheet" />
   <style>
     /* =============================================
-       CSS CUSTOM PROPERTIES — Dark Teddy Palette
+       CSS CUSTOM PROPERTIES — Midnight Forest
     ============================================= */
     :root {
-      --bg:         #2C1A0E;
-      --brown:      #C17F3E;
-      --tan:        #E8A96A;
-      --card-bg:    #3D2410;
-      --input-bg:   #4A2E15;
-      --gold:       #F0C060;
-      --text-main:  #FDF0DC;
-      --text-sec:   #D4A870;
-      --btn-text:   #2C1A0E;
-      --border:     #7A4E2A;
-      --off-white:  #FFF8EE;
-      --footer-bg:  #1A0E06;
-      --shadow:     rgba(0,0,0,0.45);
+      --bg:         #0D1F16;
+      --brown:      #D4A853;
+      --tan:        #E8C97A;
+      --card-bg:    #1A3D28;
+      --input-bg:   #163320;
+      --gold:       #D4A853;
+      --text-main:  #E8D5A3;
+      --text-sec:   #B8C9A3;
+      --btn-text:   #0D1F16;
+      --border:     #2E6B47;
+      --off-white:  #E8D5A3;
+      --footer-bg:  #081209;
+      --shadow:     rgba(0,0,0,0.4);
     }
 
     /* =============================================
@@ -40,14 +40,14 @@
     }
 
     /* =============================================
-       BEAR PAW WATERMARKS (gold on dark)
+       BEAR PAW WATERMARKS
     ============================================= */
     body::before {
       content: '';
       position: fixed;
       inset: 0;
       background-image:
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cellipse cx='60' cy='75' rx='22' ry='18' fill='%23F0C060' opacity='0.04'/%3E%3Ccircle cx='38' cy='52' r='9' fill='%23F0C060' opacity='0.04'/%3E%3Ccircle cx='56' cy='44' r='7' fill='%23F0C060' opacity='0.04'/%3E%3Ccircle cx='75' cy='44' r='7' fill='%23F0C060' opacity='0.04'/%3E%3Ccircle cx='90' cy='52' r='9' fill='%23F0C060' opacity='0.04'/%3E%3C/svg%3E");
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cellipse cx='60' cy='75' rx='22' ry='18' fill='%23D4A853' opacity='0.04'/%3E%3Ccircle cx='38' cy='52' r='9' fill='%23D4A853' opacity='0.04'/%3E%3Ccircle cx='56' cy='44' r='7' fill='%23D4A853' opacity='0.04'/%3E%3Ccircle cx='75' cy='44' r='7' fill='%23D4A853' opacity='0.04'/%3E%3Ccircle cx='90' cy='52' r='9' fill='%23D4A853' opacity='0.04'/%3E%3C/svg%3E");
       background-size: 180px 180px;
       pointer-events: none;
       z-index: 0;
@@ -66,7 +66,7 @@
       text-align: center;
       padding: 2rem 1.5rem;
       overflow: hidden;
-      background: linear-gradient(160deg, #2C1A0E 0%, #3D2410 55%, #4A2E15 100%);
+      background: linear-gradient(160deg, #0D1F16 0%, #1A3D28 55%, #1F4A30 100%);
     }
 
     .stars-canvas { position: absolute; inset: 0; pointer-events: none; }
@@ -104,7 +104,7 @@
       font-size: clamp(2.8rem, 8vw, 5rem);
       color: var(--gold);
       line-height: 1.1;
-      text-shadow: 2px 3px 14px rgba(240,192,96,0.35);
+      text-shadow: 2px 3px 14px rgba(212,168,83,0.35);
       margin-bottom: .4rem;
     }
     .hero-travel-line {
@@ -196,7 +196,6 @@
     #invitation { background: transparent; }
     .invitation-wrapper { position: relative; }
 
-    /* World map watermark behind the card */
     .world-map-bg {
       position: absolute;
       top: 50%; left: 50%;
@@ -207,7 +206,6 @@
       color: var(--gold);
     }
 
-    /* Passport stamp — sits outside the card */
     .passport-stamp {
       position: absolute;
       top: -35px;
@@ -222,8 +220,8 @@
     .invite-card {
       background-color: var(--card-bg);
       background-image:
-        repeating-linear-gradient(0deg,   transparent, transparent 28px, rgba(122,78,42,0.25) 28px, rgba(122,78,42,0.25) 30px),
-        repeating-linear-gradient(90deg,  transparent, transparent 28px, rgba(122,78,42,0.25) 28px, rgba(122,78,42,0.25) 30px);
+        repeating-linear-gradient(0deg,   transparent, transparent 28px, rgba(46,107,71,0.2) 28px, rgba(46,107,71,0.2) 30px),
+        repeating-linear-gradient(90deg,  transparent, transparent 28px, rgba(46,107,71,0.2) 28px, rgba(46,107,71,0.2) 30px);
       border-radius: 24px;
       padding: clamp(2rem, 6vw, 4rem) clamp(1.5rem, 5vw, 3.5rem);
       box-shadow: 0 8px 40px var(--shadow), 0 2px 8px rgba(0,0,0,0.3), inset 0 0 0 2px var(--border);
@@ -236,7 +234,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background-image: repeating-conic-gradient(rgba(122,78,42,0.15) 0% 25%, transparent 0% 50%);
+      background-image: repeating-conic-gradient(rgba(46,107,71,0.12) 0% 25%, transparent 0% 50%);
       background-size: 30px 30px;
       pointer-events: none;
     }
@@ -274,7 +272,7 @@
       flex-direction: column;
       align-items: center;
       gap: .5rem;
-      background: rgba(44,26,14,0.7);
+      background: rgba(13,31,22,0.7);
       border: 1.5px solid var(--border);
       border-radius: 16px;
       padding: 1.25rem 1rem;
@@ -321,7 +319,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(90deg, transparent 0%, rgba(255,220,120,0.9) 50%, transparent 100%);
+      background: linear-gradient(90deg, transparent 0%, rgba(212,168,83,0.9) 50%, transparent 100%);
       animation: shimmerLine 2.5s ease-in-out infinite;
     }
     @keyframes shimmerLine {
@@ -351,7 +349,7 @@
       border: 1.5px solid var(--border);
       box-shadow: 0 6px 30px rgba(0,0,0,0.4);
       position: relative;
-      background-image: repeating-linear-gradient(transparent, transparent 28px, rgba(122,78,42,0.18) 28px, rgba(122,78,42,0.18) 29px);
+      background-image: repeating-linear-gradient(transparent, transparent 28px, rgba(46,107,71,0.15) 28px, rgba(46,107,71,0.15) 29px);
       opacity: 0;
       transform: scale(0.96);
       filter: saturate(0.3) brightness(0.8);
@@ -389,7 +387,7 @@
     /* =============================================
        RSVP SECTION
     ============================================= */
-    #rsvp { background: linear-gradient(180deg, var(--bg) 0%, #1A0E06 100%); }
+    #rsvp { background: linear-gradient(180deg, var(--bg) 0%, #081209 100%); }
 
     .bear-suitcase { display: flex; justify-content: center; margin-bottom: 1.5rem; }
 
@@ -401,7 +399,6 @@
       border: 1.5px solid var(--border);
     }
 
-    /* Boarding pass header */
     .boarding-pass-header {
       background: var(--gold);
       padding: 1.2rem 2rem 1rem;
@@ -417,11 +414,10 @@
     .boarding-pass-sub {
       font-family: 'Special Elite', cursive;
       font-size: clamp(.72rem, 2vw, .88rem);
-      color: #3D2410;
+      color: #0D1F16;
       opacity: .85;
     }
 
-    /* Perforated tear line */
     .perforated-edge {
       height: 18px;
       background: repeating-linear-gradient(90deg, var(--card-bg) 0, var(--card-bg) 9px, transparent 9px, transparent 18px);
@@ -456,8 +452,8 @@
     .form-group textarea:focus,
     .form-group select:focus {
       border-color: var(--gold);
-      box-shadow: 0 0 0 3px rgba(240,192,96,0.2);
-      background: #5C3A1C;
+      box-shadow: 0 0 0 3px rgba(212,168,83,0.35);
+      background: #1F4A30;
     }
     .form-group textarea { resize: vertical; min-height: 110px; }
 
@@ -499,7 +495,7 @@
       transition: transform .2s, box-shadow .2s;
       letter-spacing: .02em;
     }
-    .btn-submit:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(240,192,96,0.4); }
+    .btn-submit:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(212,168,83,0.4); }
     .btn-submit:active:not(:disabled) { transform: translateY(0); }
     .btn-submit:disabled { opacity: .7; cursor: wait; }
     .btn-submit .honey-drip {
@@ -519,7 +515,6 @@
       100% { transform: scaleX(0); transform-origin: right; }
     }
 
-    /* Barcode decoration */
     .boarding-barcode {
       display: flex;
       justify-content: center;
@@ -545,7 +540,7 @@
 
     .form-error {
       display: none;
-      background: rgba(139,58,30,0.3);
+      background: rgba(13,31,22,0.5);
       border: 1.5px solid #e8997a;
       border-radius: 10px;
       padding: .75rem 1rem;
@@ -595,9 +590,9 @@
   <!-- Paper airplane — flies once on load -->
   <div id="paperAirplane" aria-hidden="true">
     <svg width="52" height="42" viewBox="0 0 52 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M2 21 L50 2 L36 40 L26 28 Z" fill="#F0C060"/>
-      <path d="M26 28 L50 2" stroke="#E8A96A" stroke-width="1.2" fill="none"/>
-      <path d="M2 21 L26 28 L22 34" stroke="#FFF8EE" stroke-width="1" fill="none" opacity=".7"/>
+      <path d="M2 21 L50 2 L36 40 L26 28 Z" fill="#D4A853"/>
+      <path d="M26 28 L50 2" stroke="#E8C97A" stroke-width="1.2" fill="none"/>
+      <path d="M2 21 L26 28 L22 34" stroke="#E8D5A3" stroke-width="1" fill="none" opacity=".7"/>
     </svg>
   </div>
 
@@ -607,41 +602,53 @@
     <div class="balloon-group" id="balloonGroup" aria-hidden="true"></div>
 
     <div class="hero-content">
-      <!-- Hero teddy bear — warm amber/gold fills -->
       <div class="hero-bear" aria-label="Cute teddy bear">
         <svg width="130" height="140" viewBox="0 0 130 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="30" cy="34" r="18" fill="#C17F3E"/>
-          <circle cx="30" cy="34" r="11" fill="#E8A96A"/>
-          <circle cx="100" cy="34" r="18" fill="#C17F3E"/>
-          <circle cx="100" cy="34" r="11" fill="#E8A96A"/>
-          <circle cx="65" cy="52" r="38" fill="#C17F3E"/>
-          <circle cx="65" cy="52" r="31" fill="#D4A870"/>
-          <ellipse cx="65" cy="65" rx="16" ry="12" fill="#E8A96A"/>
-          <ellipse cx="65" cy="59" rx="7" ry="5" fill="#7A4E2A"/>
-          <circle cx="62" cy="61" r="1.5" fill="#5A3A1A"/>
-          <circle cx="68" cy="61" r="1.5" fill="#5A3A1A"/>
-          <path d="M58 67 Q65 74 72 67" stroke="#7A4E2A" stroke-width="2" stroke-linecap="round" fill="none"/>
-          <circle cx="51" cy="44" r="7" fill="#2C1A0E"/>
-          <circle cx="79" cy="44" r="7" fill="#2C1A0E"/>
+          <!-- Ears outer -->
+          <circle cx="30" cy="34" r="18" fill="#C8956A"/>
+          <circle cx="30" cy="34" r="11" fill="#A07040"/>
+          <circle cx="100" cy="34" r="18" fill="#C8956A"/>
+          <circle cx="100" cy="34" r="11" fill="#A07040"/>
+          <!-- Head -->
+          <circle cx="65" cy="52" r="38" fill="#C8956A"/>
+          <circle cx="65" cy="52" r="31" fill="#E8D5A3"/>
+          <!-- Snout -->
+          <ellipse cx="65" cy="65" rx="16" ry="12" fill="#A07040"/>
+          <!-- Nose -->
+          <ellipse cx="65" cy="59" rx="7" ry="5" fill="#A07040"/>
+          <!-- Nostrils -->
+          <circle cx="62" cy="61" r="1.5" fill="#163320"/>
+          <circle cx="68" cy="61" r="1.5" fill="#163320"/>
+          <!-- Mouth -->
+          <path d="M58 67 Q65 74 72 67" stroke="#A07040" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <!-- Eyes -->
+          <circle cx="51" cy="44" r="7" fill="#163320"/>
+          <circle cx="79" cy="44" r="7" fill="#163320"/>
           <circle cx="53" cy="42" r="2.5" fill="white"/>
           <circle cx="81" cy="42" r="2.5" fill="white"/>
-          <ellipse cx="65" cy="108" rx="33" ry="30" fill="#C17F3E"/>
-          <ellipse cx="65" cy="108" rx="23" ry="20" fill="#D4A870"/>
-          <ellipse cx="22" cy="105" rx="16" ry="10" fill="#C17F3E" transform="rotate(-20 22 105)"/>
-          <ellipse cx="108" cy="105" rx="16" ry="10" fill="#C17F3E" transform="rotate(20 108 105)"/>
-          <ellipse cx="48" cy="133" rx="14" ry="9" fill="#C17F3E"/>
-          <ellipse cx="82" cy="133" rx="14" ry="9" fill="#C17F3E"/>
-          <path d="M54 87 L65 93 L76 87 L65 81 Z" fill="#F0C060"/>
-          <circle cx="65" cy="87" r="4" fill="#C17F3E"/>
-          <line x1="22" y1="98" x2="18" y2="70" stroke="#7A4E2A" stroke-width="1.5" stroke-dasharray="3,2"/>
-          <line x1="22" y1="98" x2="30" y2="65" stroke="#7A4E2A" stroke-width="1.5" stroke-dasharray="3,2"/>
-          <line x1="22" y1="98" x2="10" y2="68" stroke="#C17F3E" stroke-width="1.5" stroke-dasharray="3,2"/>
-          <ellipse cx="18" cy="62" rx="8" ry="10" fill="#F0C060"/>
-          <ellipse cx="30" cy="56" rx="7" ry="9" fill="#C17F3E"/>
-          <ellipse cx="10" cy="59" rx="6" ry="8" fill="#E8A96A"/>
-          <circle cx="18" cy="72" r="1.5" fill="#C17F3E"/>
-          <circle cx="30" cy="65" r="1.5" fill="#A07550"/>
-          <circle cx="10" cy="67" r="1.5" fill="#D4A870"/>
+          <!-- Body -->
+          <ellipse cx="65" cy="108" rx="33" ry="30" fill="#C8956A"/>
+          <ellipse cx="65" cy="108" rx="23" ry="20" fill="#E8D5A3"/>
+          <!-- Arms -->
+          <ellipse cx="22" cy="105" rx="16" ry="10" fill="#C8956A" transform="rotate(-20 22 105)"/>
+          <ellipse cx="108" cy="105" rx="16" ry="10" fill="#C8956A" transform="rotate(20 108 105)"/>
+          <!-- Legs -->
+          <ellipse cx="48" cy="133" rx="14" ry="9" fill="#C8956A"/>
+          <ellipse cx="82" cy="133" rx="14" ry="9" fill="#C8956A"/>
+          <!-- Bow tie -->
+          <path d="M54 87 L65 93 L76 87 L65 81 Z" fill="#D4A853"/>
+          <circle cx="65" cy="87" r="4" fill="#C8956A"/>
+          <!-- Balloon strings -->
+          <line x1="22" y1="98" x2="18" y2="70" stroke="#2E6B47" stroke-width="1.5" stroke-dasharray="3,2"/>
+          <line x1="22" y1="98" x2="30" y2="65" stroke="#2E6B47" stroke-width="1.5" stroke-dasharray="3,2"/>
+          <line x1="22" y1="98" x2="10" y2="68" stroke="#C8956A" stroke-width="1.5" stroke-dasharray="3,2"/>
+          <!-- Small balloons -->
+          <ellipse cx="18" cy="62" rx="8" ry="10" fill="#D4A853"/>
+          <ellipse cx="30" cy="56" rx="7" ry="9" fill="#C8956A"/>
+          <ellipse cx="10" cy="59" rx="6" ry="8" fill="#E8C97A"/>
+          <circle cx="18" cy="72" r="1.5" fill="#C8956A"/>
+          <circle cx="30" cy="65" r="1.5" fill="#2E6B47"/>
+          <circle cx="10" cy="67" r="1.5" fill="#E8D5A3"/>
         </svg>
       </div>
 
@@ -649,7 +656,7 @@
       <p class="hero-travel-line">Our Little Cub is Going Places 🌍</p>
       <p class="hero-subtitle">Two travelers. One great adventure. And a tiny co-pilot on the way.</p>
 
-      <a href="#invitation" style="display:inline-block;background:linear-gradient(135deg,#F0C060,#E8A96A);color:#2C1A0E;padding:.85rem 2.2rem;border-radius:50px;font-family:'Nunito',sans-serif;font-weight:700;font-size:1rem;text-decoration:none;box-shadow:0 6px 20px rgba(240,192,96,0.35);transition:transform .2s,box-shadow .2s;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 10px 28px rgba(240,192,96,0.5)'" onmouseout="this.style.transform='';this.style.boxShadow='0 6px 20px rgba(240,192,96,0.35)'">
+      <a href="#invitation" style="display:inline-block;background:linear-gradient(135deg,#D4A853,#E8C97A);color:#0D1F16;padding:.85rem 2.2rem;border-radius:50px;font-family:'Nunito',sans-serif;font-weight:700;font-size:1rem;text-decoration:none;box-shadow:0 6px 20px rgba(212,168,83,0.35);transition:transform .2s,box-shadow .2s;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 10px 28px rgba(212,168,83,0.5)'" onmouseout="this.style.transform='';this.style.boxShadow='0 6px 20px rgba(212,168,83,0.35)'">
         View Invitation 🐻
       </a>
 
@@ -662,60 +669,54 @@
     <!-- Hot air balloon with tiny bear -->
     <div class="hero-balloon" aria-hidden="true">
       <svg width="105" height="148" viewBox="0 0 105 148" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <!-- Balloon envelope -->
-        <ellipse cx="52" cy="54" rx="40" ry="46" fill="#C17F3E"/>
-        <!-- Gold vertical stripe panels -->
-        <path d="M52 8 Q60 12 65 26 Q68 40 66 54 Q64 68 60 80 Q56 90 52 96 Q48 90 44 80 Q40 68 38 54 Q36 40 39 26 Q44 12 52 8Z" fill="#F0C060" opacity=".75"/>
-        <path d="M72 16 Q82 28 85 54 Q84 72 76 86 Q70 95 65 98 Q61 90 60 80 Q64 68 66 54 Q68 40 65 26 Q69 20 72 16Z" fill="#E8A96A" opacity=".5"/>
-        <path d="M32 16 Q22 28 19 54 Q20 72 28 86 Q34 95 39 98 Q43 90 44 80 Q40 68 38 54 Q36 40 39 26 Q35 20 32 16Z" fill="#E8A96A" opacity=".5"/>
-        <!-- Bottom arc -->
-        <path d="M22 86 Q52 108 82 86" stroke="#7A4E2A" stroke-width="2" fill="none"/>
-        <!-- Ropes to basket -->
-        <line x1="24" y1="88" x2="30" y2="118" stroke="#7A4E2A" stroke-width="1.5"/>
-        <line x1="80" y1="88" x2="74" y2="118" stroke="#7A4E2A" stroke-width="1.5"/>
-        <line x1="40" y1="97" x2="38" y2="118" stroke="#7A4E2A" stroke-width="1.5"/>
-        <line x1="64" y1="97" x2="66" y2="118" stroke="#7A4E2A" stroke-width="1.5"/>
-        <!-- Basket -->
-        <rect x="28" y="118" width="49" height="24" rx="5" fill="#7A4E2A"/>
-        <rect x="30" y="120" width="45" height="20" rx="4" fill="#5A3A1A"/>
+        <ellipse cx="52" cy="54" rx="40" ry="46" fill="#C8956A"/>
+        <path d="M52 8 Q60 12 65 26 Q68 40 66 54 Q64 68 60 80 Q56 90 52 96 Q48 90 44 80 Q40 68 38 54 Q36 40 39 26 Q44 12 52 8Z" fill="#D4A853" opacity=".75"/>
+        <path d="M72 16 Q82 28 85 54 Q84 72 76 86 Q70 95 65 98 Q61 90 60 80 Q64 68 66 54 Q68 40 65 26 Q69 20 72 16Z" fill="#E8C97A" opacity=".5"/>
+        <path d="M32 16 Q22 28 19 54 Q20 72 28 86 Q34 95 39 98 Q43 90 44 80 Q40 68 38 54 Q36 40 39 26 Q35 20 32 16Z" fill="#E8C97A" opacity=".5"/>
+        <path d="M22 86 Q52 108 82 86" stroke="#2E6B47" stroke-width="2" fill="none"/>
+        <line x1="24" y1="88" x2="30" y2="118" stroke="#2E6B47" stroke-width="1.5"/>
+        <line x1="80" y1="88" x2="74" y2="118" stroke="#2E6B47" stroke-width="1.5"/>
+        <line x1="40" y1="97" x2="38" y2="118" stroke="#2E6B47" stroke-width="1.5"/>
+        <line x1="64" y1="97" x2="66" y2="118" stroke="#2E6B47" stroke-width="1.5"/>
+        <rect x="28" y="118" width="49" height="24" rx="5" fill="#2E6B47"/>
+        <rect x="30" y="120" width="45" height="20" rx="4" fill="#163320"/>
         <!-- Tiny bear in basket -->
-        <circle cx="52" cy="126" r="9" fill="#C17F3E"/>
-        <circle cx="52" cy="126" r="7" fill="#D4A870"/>
-        <circle cx="46" cy="119" r="3.5" fill="#C17F3E"/>
-        <circle cx="58" cy="119" r="3.5" fill="#C17F3E"/>
-        <circle cx="46" cy="119" r="2" fill="#E8A96A"/>
-        <circle cx="58" cy="119" r="2" fill="#E8A96A"/>
-        <ellipse cx="52" cy="130" rx="4" ry="3" fill="#E8A96A"/>
-        <ellipse cx="52" cy="128" rx="2" ry="1.5" fill="#7A4E2A"/>
-        <circle cx="49" cy="124" r="1.8" fill="#2C1A0E"/>
-        <circle cx="55" cy="124" r="1.8" fill="#2C1A0E"/>
+        <circle cx="52" cy="126" r="9" fill="#C8956A"/>
+        <circle cx="52" cy="126" r="7" fill="#E8D5A3"/>
+        <circle cx="46" cy="119" r="3.5" fill="#C8956A"/>
+        <circle cx="58" cy="119" r="3.5" fill="#C8956A"/>
+        <circle cx="46" cy="119" r="2" fill="#A07040"/>
+        <circle cx="58" cy="119" r="2" fill="#A07040"/>
+        <ellipse cx="52" cy="130" rx="4" ry="3" fill="#A07040"/>
+        <ellipse cx="52" cy="128" rx="2" ry="1.5" fill="#A07040"/>
+        <circle cx="49" cy="124" r="1.8" fill="#163320"/>
+        <circle cx="55" cy="124" r="1.8" fill="#163320"/>
         <circle cx="49.5" cy="123.4" r=".7" fill="white"/>
         <circle cx="55.5" cy="123.4" r=".7" fill="white"/>
-        <!-- Waving arm -->
-        <path d="M59 130 Q68 124 71 118" stroke="#C17F3E" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <path d="M59 130 Q68 124 71 118" stroke="#C8956A" stroke-width="3" stroke-linecap="round" fill="none"/>
       </svg>
     </div>
 
-    <!-- Pampas grass left — gold/amber on dark -->
+    <!-- Pampas grass left -->
     <div style="position:absolute;bottom:0;left:0;opacity:.5;pointer-events:none;" aria-hidden="true">
       <svg width="160" height="200" viewBox="0 0 160 200" fill="none">
-        <path d="M30 200 Q20 160 40 120 Q50 90 35 60" stroke="#C17F3E" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-        <path d="M50 200 Q45 155 60 115 Q70 85 55 50" stroke="#F0C060" stroke-width="2" fill="none" stroke-linecap="round"/>
-        <path d="M15 200 Q5 165 25 130 Q35 105 20 75" stroke="#E8A96A" stroke-width="2" fill="none" stroke-linecap="round"/>
-        <ellipse cx="40" cy="58" rx="12" ry="6" fill="#E8A96A" opacity=".7" transform="rotate(-20 40 58)"/>
-        <ellipse cx="55" cy="48" rx="10" ry="5" fill="#F0C060" opacity=".6" transform="rotate(15 55 48)"/>
-        <ellipse cx="20" cy="73" rx="9" ry="5" fill="#E8A96A" opacity=".5" transform="rotate(-10 20 73)"/>
+        <path d="M30 200 Q20 160 40 120 Q50 90 35 60" stroke="#7CAE8A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <path d="M50 200 Q45 155 60 115 Q70 85 55 50" stroke="#D4A853" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M15 200 Q5 165 25 130 Q35 105 20 75" stroke="#2E6B47" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <ellipse cx="40" cy="58" rx="12" ry="6" fill="#7CAE8A" opacity=".7" transform="rotate(-20 40 58)"/>
+        <ellipse cx="55" cy="48" rx="10" ry="5" fill="#D4A853" opacity=".6" transform="rotate(15 55 48)"/>
+        <ellipse cx="20" cy="73" rx="9" ry="5" fill="#7CAE8A" opacity=".5" transform="rotate(-10 20 73)"/>
       </svg>
     </div>
     <!-- Pampas grass right -->
     <div style="position:absolute;bottom:0;right:0;opacity:.5;pointer-events:none;transform:scaleX(-1);" aria-hidden="true">
       <svg width="160" height="200" viewBox="0 0 160 200" fill="none">
-        <path d="M30 200 Q20 160 40 120 Q50 90 35 60" stroke="#C17F3E" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-        <path d="M50 200 Q45 155 60 115 Q70 85 55 50" stroke="#F0C060" stroke-width="2" fill="none" stroke-linecap="round"/>
-        <path d="M15 200 Q5 165 25 130 Q35 105 20 75" stroke="#E8A96A" stroke-width="2" fill="none" stroke-linecap="round"/>
-        <ellipse cx="40" cy="58" rx="12" ry="6" fill="#E8A96A" opacity=".7" transform="rotate(-20 40 58)"/>
-        <ellipse cx="55" cy="48" rx="10" ry="5" fill="#F0C060" opacity=".6" transform="rotate(15 55 48)"/>
-        <ellipse cx="20" cy="73" rx="9" ry="5" fill="#E8A96A" opacity=".5" transform="rotate(-10 20 73)"/>
+        <path d="M30 200 Q20 160 40 120 Q50 90 35 60" stroke="#7CAE8A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <path d="M50 200 Q45 155 60 115 Q70 85 55 50" stroke="#D4A853" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M15 200 Q5 165 25 130 Q35 105 20 75" stroke="#2E6B47" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <ellipse cx="40" cy="58" rx="12" ry="6" fill="#7CAE8A" opacity=".7" transform="rotate(-20 40 58)"/>
+        <ellipse cx="55" cy="48" rx="10" ry="5" fill="#D4A853" opacity=".6" transform="rotate(15 55 48)"/>
+        <ellipse cx="20" cy="73" rx="9" ry="5" fill="#7CAE8A" opacity=".5" transform="rotate(-10 20 73)"/>
       </svg>
     </div>
   </section>
@@ -723,14 +724,14 @@
   <!-- Honey drip divider -->
   <div class="honey-divider" aria-hidden="true">
     <svg viewBox="0 0 800 60" preserveAspectRatio="none" height="60" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,0 L800,0 L800,30 Q750,55 700,35 Q650,15 600,40 Q550,60 500,38 Q450,16 400,42 Q350,60 300,38 Q250,16 200,40 Q150,60 100,38 Q50,16 0,40 Z" fill="#3D2410"/>
-      <ellipse cx="100" cy="42" rx="6" ry="10" fill="#F0C060" opacity=".5"/>
-      <ellipse cx="200" cy="44" rx="5" ry="8"  fill="#F0C060" opacity=".4"/>
-      <ellipse cx="300" cy="42" rx="7" ry="11" fill="#F0C060" opacity=".55"/>
-      <ellipse cx="400" cy="46" rx="5" ry="9"  fill="#F0C060" opacity=".45"/>
-      <ellipse cx="500" cy="41" rx="6" ry="10" fill="#F0C060" opacity=".5"/>
-      <ellipse cx="600" cy="43" rx="4" ry="8"  fill="#F0C060" opacity=".4"/>
-      <ellipse cx="700" cy="38" rx="6" ry="9"  fill="#F0C060" opacity=".5"/>
+      <path d="M0,0 L800,0 L800,30 Q750,55 700,35 Q650,15 600,40 Q550,60 500,38 Q450,16 400,42 Q350,60 300,38 Q250,16 200,40 Q150,60 100,38 Q50,16 0,40 Z" fill="#1A3D28"/>
+      <ellipse cx="100" cy="42" rx="6" ry="10" fill="#D4A853" opacity=".5"/>
+      <ellipse cx="200" cy="44" rx="5" ry="8"  fill="#D4A853" opacity=".4"/>
+      <ellipse cx="300" cy="42" rx="7" ry="11" fill="#D4A853" opacity=".55"/>
+      <ellipse cx="400" cy="46" rx="5" ry="9"  fill="#D4A853" opacity=".45"/>
+      <ellipse cx="500" cy="41" rx="6" ry="10" fill="#D4A853" opacity=".5"/>
+      <ellipse cx="600" cy="43" rx="4" ry="8"  fill="#D4A853" opacity=".4"/>
+      <ellipse cx="700" cy="38" rx="6" ry="9"  fill="#D4A853" opacity=".5"/>
     </svg>
   </div>
 
@@ -741,83 +742,80 @@
 
         <!-- World map watermark -->
         <div class="world-map-bg" aria-hidden="true">
-          <svg width="680" height="380" viewBox="0 0 680 380" fill="#F0C060" xmlns="http://www.w3.org/2000/svg">
-            <!-- Simplified continents -->
+          <svg width="680" height="380" viewBox="0 0 680 380" fill="#D4A853" xmlns="http://www.w3.org/2000/svg">
             <path d="M55 75 Q80 55 130 68 Q162 75 170 100 Q176 130 154 152 Q128 172 98 166 Q65 158 50 136 Q36 112 55 75Z"/>
             <path d="M125 180 Q153 168 175 186 Q197 212 186 262 Q174 304 152 322 Q126 332 112 312 Q96 280 102 238 Q108 198 125 180Z"/>
             <path d="M285 55 Q318 44 344 62 Q362 78 356 100 Q340 118 312 112 Q290 106 282 88 Q278 70 285 55Z"/>
             <path d="M295 128 Q328 116 355 134 Q378 158 372 212 Q360 262 338 286 Q312 302 290 285 Q268 260 270 210 Q272 162 295 128Z"/>
             <path d="M368 45 Q432 30 504 48 Q564 64 582 100 Q592 132 560 158 Q520 178 468 166 Q418 154 388 132 Q362 110 363 82 Q364 60 368 45Z"/>
             <path d="M516 218 Q558 207 590 224 Q618 246 612 277 Q600 304 570 308 Q538 310 518 290 Q498 268 502 244 Q506 224 516 218Z"/>
-            <!-- Route dots -->
             <circle cx="140" cy="92" r="4"/>
             <circle cx="310" cy="78" r="4"/>
             <circle cx="470" cy="95" r="4"/>
-            <path d="M144 92 Q225 68 306 78" stroke="#F0C060" stroke-width="1.5" stroke-dasharray="5,5" fill="none"/>
-            <path d="M314 78 Q392 62 466 95" stroke="#F0C060" stroke-width="1.5" stroke-dasharray="5,5" fill="none"/>
+            <path d="M144 92 Q225 68 306 78" stroke="#D4A853" stroke-width="1.5" stroke-dasharray="5,5" fill="none"/>
+            <path d="M314 78 Q392 62 466 95" stroke="#D4A853" stroke-width="1.5" stroke-dasharray="5,5" fill="none"/>
           </svg>
         </div>
 
-        <!-- Passport stamp — outside card, positioned in wrapper -->
+        <!-- Passport stamp -->
         <div class="passport-stamp" aria-hidden="true">
           <svg width="145" height="145" viewBox="0 0 145 145" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="72" cy="72" r="64" stroke="#F0C060" stroke-width="2.5" stroke-dasharray="9,5" fill="none" transform="rotate(12 72 72)"/>
-            <circle cx="72" cy="72" r="54" stroke="#F0C060" stroke-width="1" stroke-dasharray="3,3" fill="none" opacity=".5"/>
+            <circle cx="72" cy="72" r="64" stroke="#D4A853" stroke-width="2.5" stroke-dasharray="9,5" fill="none" transform="rotate(12 72 72)"/>
+            <circle cx="72" cy="72" r="54" stroke="#D4A853" stroke-width="1" stroke-dasharray="3,3" fill="none" opacity=".5"/>
             <defs>
               <path id="stampArc" d="M72,72 m -52,0 a 52,52 0 1,1 104,0 a 52,52 0 1,1 -104,0"/>
             </defs>
-            <text font-family="'Special Elite',cursive" font-size="8.5" fill="#F0C060" letter-spacing="2.8">
+            <text font-family="'Special Elite',cursive" font-size="8.5" fill="#D4A853" letter-spacing="2.8">
               <textPath href="#stampArc">BABY SHOWER · AUGUST 2025 · WOODBRIDGE NJ ✈ </textPath>
             </text>
-            <!-- Star center -->
-            <path d="M72 60 L74.2 67 L81.5 67 L75.8 71.3 L78 78.5 L72 74.2 L66 78.5 L68.2 71.3 L62.5 67 L69.8 67 Z" fill="#F0C060" opacity=".85"/>
+            <path d="M72 60 L74.2 67 L81.5 67 L75.8 71.3 L78 78.5 L72 74.2 L66 78.5 L68.2 71.3 L62.5 67 L69.8 67 Z" fill="#D4A853" opacity=".85"/>
           </svg>
         </div>
 
         <div class="invite-card fade-in">
-          <!-- Botanical corners — gold/amber fills -->
+          <!-- Botanical corners -->
           <div class="botanical-tl">
             <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
-              <path d="M5 95 Q15 60 50 40 Q70 30 90 10" stroke="#C17F3E" stroke-width="2" fill="none" stroke-linecap="round"/>
-              <ellipse cx="50" cy="40" rx="15" ry="8" fill="#F0C060" opacity=".4" transform="rotate(-30 50 40)"/>
-              <ellipse cx="70" cy="28" rx="12" ry="6" fill="#C17F3E" opacity=".5" transform="rotate(-50 70 28)"/>
-              <ellipse cx="30" cy="55" rx="10" ry="5" fill="#E8A96A" opacity=".4" transform="rotate(-10 30 55)"/>
+              <path d="M5 95 Q15 60 50 40 Q70 30 90 10" stroke="#7CAE8A" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <ellipse cx="50" cy="40" rx="15" ry="8" fill="#D4A853" opacity=".4" transform="rotate(-30 50 40)"/>
+              <ellipse cx="70" cy="28" rx="12" ry="6" fill="#7CAE8A" opacity=".5" transform="rotate(-50 70 28)"/>
+              <ellipse cx="30" cy="55" rx="10" ry="5" fill="#2E6B47" opacity=".4" transform="rotate(-10 30 55)"/>
             </svg>
           </div>
           <div class="botanical-br">
             <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
-              <path d="M5 95 Q15 60 50 40 Q70 30 90 10" stroke="#C17F3E" stroke-width="2" fill="none" stroke-linecap="round"/>
-              <ellipse cx="50" cy="40" rx="15" ry="8" fill="#F0C060" opacity=".4" transform="rotate(-30 50 40)"/>
-              <ellipse cx="70" cy="28" rx="12" ry="6" fill="#C17F3E" opacity=".5" transform="rotate(-50 70 28)"/>
-              <ellipse cx="30" cy="55" rx="10" ry="5" fill="#E8A96A" opacity=".4" transform="rotate(-10 30 55)"/>
+              <path d="M5 95 Q15 60 50 40 Q70 30 90 10" stroke="#7CAE8A" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <ellipse cx="50" cy="40" rx="15" ry="8" fill="#D4A853" opacity=".4" transform="rotate(-30 50 40)"/>
+              <ellipse cx="70" cy="28" rx="12" ry="6" fill="#7CAE8A" opacity=".5" transform="rotate(-50 70 28)"/>
+              <ellipse cx="30" cy="55" rx="10" ry="5" fill="#2E6B47" opacity=".4" transform="rotate(-10 30 55)"/>
             </svg>
           </div>
 
           <!-- Bear inside card -->
           <svg class="invite-bear" width="100" height="110" viewBox="0 0 130 140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Seated teddy bear">
-            <circle cx="30" cy="34" r="18" fill="#C17F3E"/>
-            <circle cx="30" cy="34" r="11" fill="#E8A96A"/>
-            <circle cx="100" cy="34" r="18" fill="#C17F3E"/>
-            <circle cx="100" cy="34" r="11" fill="#E8A96A"/>
-            <circle cx="65" cy="52" r="38" fill="#C17F3E"/>
-            <circle cx="65" cy="52" r="31" fill="#D4A870"/>
-            <ellipse cx="65" cy="65" rx="16" ry="12" fill="#E8A96A"/>
-            <ellipse cx="65" cy="59" rx="7" ry="5" fill="#7A4E2A"/>
-            <circle cx="62" cy="61" r="1.5" fill="#5A3A1A"/>
-            <circle cx="68" cy="61" r="1.5" fill="#5A3A1A"/>
-            <path d="M58 67 Q65 74 72 67" stroke="#7A4E2A" stroke-width="2" stroke-linecap="round" fill="none"/>
-            <circle cx="51" cy="44" r="7" fill="#2C1A0E"/>
-            <circle cx="79" cy="44" r="7" fill="#2C1A0E"/>
+            <circle cx="30" cy="34" r="18" fill="#C8956A"/>
+            <circle cx="30" cy="34" r="11" fill="#A07040"/>
+            <circle cx="100" cy="34" r="18" fill="#C8956A"/>
+            <circle cx="100" cy="34" r="11" fill="#A07040"/>
+            <circle cx="65" cy="52" r="38" fill="#C8956A"/>
+            <circle cx="65" cy="52" r="31" fill="#E8D5A3"/>
+            <ellipse cx="65" cy="65" rx="16" ry="12" fill="#A07040"/>
+            <ellipse cx="65" cy="59" rx="7" ry="5" fill="#A07040"/>
+            <circle cx="62" cy="61" r="1.5" fill="#163320"/>
+            <circle cx="68" cy="61" r="1.5" fill="#163320"/>
+            <path d="M58 67 Q65 74 72 67" stroke="#A07040" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <circle cx="51" cy="44" r="7" fill="#163320"/>
+            <circle cx="79" cy="44" r="7" fill="#163320"/>
             <circle cx="53" cy="42" r="2.5" fill="white"/>
             <circle cx="81" cy="42" r="2.5" fill="white"/>
-            <ellipse cx="65" cy="108" rx="33" ry="30" fill="#C17F3E"/>
-            <ellipse cx="65" cy="108" rx="23" ry="20" fill="#D4A870"/>
-            <ellipse cx="22" cy="105" rx="16" ry="10" fill="#C17F3E" transform="rotate(-20 22 105)"/>
-            <ellipse cx="108" cy="105" rx="16" ry="10" fill="#C17F3E" transform="rotate(20 108 105)"/>
-            <ellipse cx="48" cy="133" rx="14" ry="9" fill="#C17F3E"/>
-            <ellipse cx="82" cy="133" rx="14" ry="9" fill="#C17F3E"/>
-            <path d="M54 87 L65 93 L76 87 L65 81 Z" fill="#F0C060"/>
-            <circle cx="65" cy="87" r="4" fill="#C17F3E"/>
+            <ellipse cx="65" cy="108" rx="33" ry="30" fill="#C8956A"/>
+            <ellipse cx="65" cy="108" rx="23" ry="20" fill="#E8D5A3"/>
+            <ellipse cx="22" cy="105" rx="16" ry="10" fill="#C8956A" transform="rotate(-20 22 105)"/>
+            <ellipse cx="108" cy="105" rx="16" ry="10" fill="#C8956A" transform="rotate(20 108 105)"/>
+            <ellipse cx="48" cy="133" rx="14" ry="9" fill="#C8956A"/>
+            <ellipse cx="82" cy="133" rx="14" ry="9" fill="#C8956A"/>
+            <path d="M54 87 L65 93 L76 87 L65 81 Z" fill="#D4A853"/>
+            <circle cx="65" cy="87" r="4" fill="#C8956A"/>
           </svg>
 
           <p class="invite-name-block">
@@ -853,7 +851,7 @@
             </div>
           </div>
 
-          <div style="margin-top:2rem;display:inline-flex;align-items:center;gap:.6rem;background:linear-gradient(135deg,#F0C060,#E8A96A);color:#2C1A0E;padding:.6rem 1.5rem;border-radius:50px;font-weight:700;font-size:.9rem;">
+          <div style="margin-top:2rem;display:inline-flex;align-items:center;gap:.6rem;background:linear-gradient(135deg,#D4A853,#E8C97A);color:#0D1F16;padding:.6rem 1.5rem;border-radius:50px;font-weight:700;font-size:.9rem;">
             🐻 "We Can Bearly Wait" Baby Shower &nbsp;·&nbsp; Gender Surprise 🌟
           </div>
         </div>
@@ -864,8 +862,8 @@
   <!-- Honeycomb divider -->
   <div class="honey-divider" aria-hidden="true">
     <svg viewBox="0 0 800 50" preserveAspectRatio="none" height="50" xmlns="http://www.w3.org/2000/svg">
-      <rect width="800" height="50" fill="#3D2410"/>
-      <g fill="none" stroke="#F0C060" stroke-width="1" opacity=".18">
+      <rect width="800" height="50" fill="#1A3D28"/>
+      <g fill="none" stroke="#D4A853" stroke-width="1" opacity=".18">
         <polygon points="50,5 65,14 65,32 50,41 35,32 35,14"/>
         <polygon points="80,5 95,14 95,32 80,41 65,32 65,14"/>
         <polygon points="110,5 125,14 125,32 110,41 95,32 95,14"/>
@@ -895,31 +893,25 @@
     </svg>
   </div>
 
-  <!-- Travel route strip — between invitation and RSVP -->
+  <!-- Travel route strip -->
   <div class="travel-strip-wrap" aria-label="Travel icons route">
     <div class="travel-route">
       <div class="travel-route-line"></div>
-      <!-- Airplane -->
       <div class="travel-icon" title="Airplane">
         <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"/></svg>
       </div>
-      <!-- Suitcase -->
       <div class="travel-icon" title="Suitcase">
         <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
       </div>
-      <!-- Globe -->
       <div class="travel-icon" title="Globe">
         <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
       </div>
-      <!-- Camera -->
       <div class="travel-icon" title="Camera">
         <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
       </div>
-      <!-- Compass -->
       <div class="travel-icon" title="Compass">
         <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
       </div>
-      <!-- Map Pin -->
       <div class="travel-icon" title="Map Pin">
         <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
       </div>
@@ -931,9 +923,9 @@
     <div class="section-inner" style="padding-top:1.5rem;padding-bottom:3rem;">
       <div class="journal-card" id="journalCard">
         <div class="journal-deco" style="margin-bottom:1.4rem;">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="#F0C060"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"/></svg>
-          <svg width="26" height="26" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="11" stroke="#F0C060" stroke-width="2" stroke-dasharray="4,3"/><circle cx="14" cy="14" r="4" fill="#F0C060" opacity=".7"/></svg>
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#F0C060" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="#D4A853"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"/></svg>
+          <svg width="26" height="26" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="11" stroke="#D4A853" stroke-width="2" stroke-dasharray="4,3"/><circle cx="14" cy="14" r="4" fill="#D4A853" opacity=".7"/></svg>
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D4A853" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
         </div>
 
         <h2 class="journal-title">The Travelers</h2>
@@ -942,9 +934,9 @@
         </p>
 
         <div class="journal-deco">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="#F0C060" opacity=".6"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"/></svg>
-          <svg width="22" height="22" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="11" stroke="#F0C060" stroke-width="2" stroke-dasharray="4,3" opacity=".6"/><circle cx="14" cy="14" r="4" fill="#F0C060" opacity=".4"/></svg>
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F0C060" stroke-width="2" opacity=".6"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#D4A853" opacity=".6"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"/></svg>
+          <svg width="22" height="22" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="11" stroke="#D4A853" stroke-width="2" stroke-dasharray="4,3" opacity=".6"/><circle cx="14" cy="14" r="4" fill="#D4A853" opacity=".4"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D4A853" stroke-width="2" opacity=".6"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
         </div>
       </div>
     </div>
@@ -959,44 +951,43 @@
       <div class="bear-suitcase fade-in delay-1" aria-label="Teddy bear with suitcase">
         <svg width="130" height="150" viewBox="0 0 130 150" fill="none" xmlns="http://www.w3.org/2000/svg">
           <!-- Suitcase -->
-          <rect x="74" y="102" width="42" height="30" rx="5" fill="#7A4E2A"/>
-          <rect x="76" y="104" width="38" height="26" rx="4" fill="#5A3A1A"/>
-          <rect x="84" y="99" width="10" height="7" rx="2.5" fill="#C17F3E" stroke="#7A4E2A" stroke-width="1"/>
-          <line x1="95" y1="104" x2="95" y2="130" stroke="#7A4E2A" stroke-width="1.5"/>
-          <line x1="76" y1="117" x2="114" y2="117" stroke="#7A4E2A" stroke-width="1"/>
-          <circle cx="81" cy="133" r="3.5" fill="#C17F3E"/>
-          <circle cx="109" cy="133" r="3.5" fill="#C17F3E"/>
+          <rect x="74" y="102" width="42" height="30" rx="5" fill="#2E6B47"/>
+          <rect x="76" y="104" width="38" height="26" rx="4" fill="#163320"/>
+          <rect x="84" y="99" width="10" height="7" rx="2.5" fill="#C8956A" stroke="#2E6B47" stroke-width="1"/>
+          <line x1="95" y1="104" x2="95" y2="130" stroke="#2E6B47" stroke-width="1.5"/>
+          <line x1="76" y1="117" x2="114" y2="117" stroke="#2E6B47" stroke-width="1"/>
+          <circle cx="81" cy="133" r="3.5" fill="#C8956A"/>
+          <circle cx="109" cy="133" r="3.5" fill="#C8956A"/>
           <!-- Bear body -->
-          <ellipse cx="52" cy="110" rx="30" ry="27" fill="#C17F3E"/>
-          <ellipse cx="52" cy="110" rx="20" ry="18" fill="#D4A870"/>
+          <ellipse cx="52" cy="110" rx="30" ry="27" fill="#C8956A"/>
+          <ellipse cx="52" cy="110" rx="20" ry="18" fill="#E8D5A3"/>
           <!-- Bear head -->
-          <circle cx="52" cy="70" r="34" fill="#C17F3E"/>
-          <circle cx="52" cy="70" r="27" fill="#D4A870"/>
+          <circle cx="52" cy="70" r="34" fill="#C8956A"/>
+          <circle cx="52" cy="70" r="27" fill="#E8D5A3"/>
           <!-- Ears -->
-          <circle cx="22" cy="46" r="15" fill="#C17F3E"/>
-          <circle cx="22" cy="46" r="9" fill="#E8A96A"/>
-          <circle cx="82" cy="46" r="15" fill="#C17F3E"/>
-          <circle cx="82" cy="46" r="9" fill="#E8A96A"/>
+          <circle cx="22" cy="46" r="15" fill="#C8956A"/>
+          <circle cx="22" cy="46" r="9" fill="#A07040"/>
+          <circle cx="82" cy="46" r="15" fill="#C8956A"/>
+          <circle cx="82" cy="46" r="9" fill="#A07040"/>
           <!-- Snout -->
-          <ellipse cx="52" cy="82" rx="14" ry="11" fill="#E8A96A"/>
-          <ellipse cx="52" cy="76" rx="6" ry="4.5" fill="#7A4E2A"/>
+          <ellipse cx="52" cy="82" rx="14" ry="11" fill="#A07040"/>
+          <ellipse cx="52" cy="76" rx="6" ry="4.5" fill="#A07040"/>
           <!-- Mouth -->
-          <path d="M46 85 Q52 92 58 85" stroke="#7A4E2A" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+          <path d="M46 85 Q52 92 58 85" stroke="#A07040" stroke-width="1.5" stroke-linecap="round" fill="none"/>
           <!-- Eyes -->
-          <circle cx="40" cy="62" r="6.5" fill="#2C1A0E"/>
-          <circle cx="64" cy="62" r="6.5" fill="#2C1A0E"/>
+          <circle cx="40" cy="62" r="6.5" fill="#163320"/>
+          <circle cx="64" cy="62" r="6.5" fill="#163320"/>
           <circle cx="41" cy="60.5" r="2.2" fill="white"/>
           <circle cx="65" cy="60.5" r="2.2" fill="white"/>
-          <!-- Right arm — holds suitcase handle -->
-          <ellipse cx="86" cy="108" rx="14" ry="9" fill="#C17F3E" transform="rotate(18 86 108)"/>
-          <!-- Left arm — waving up -->
-          <ellipse cx="18" cy="98" rx="14" ry="9" fill="#C17F3E" transform="rotate(-45 18 98)"/>
+          <!-- Arms -->
+          <ellipse cx="86" cy="108" rx="14" ry="9" fill="#C8956A" transform="rotate(18 86 108)"/>
+          <ellipse cx="18" cy="98" rx="14" ry="9" fill="#C8956A" transform="rotate(-45 18 98)"/>
           <!-- Legs -->
-          <ellipse cx="40" cy="134" rx="13" ry="9" fill="#C17F3E"/>
-          <ellipse cx="64" cy="134" rx="13" ry="9" fill="#C17F3E"/>
+          <ellipse cx="40" cy="134" rx="13" ry="9" fill="#C8956A"/>
+          <ellipse cx="64" cy="134" rx="13" ry="9" fill="#C8956A"/>
           <!-- Bow tie -->
-          <path d="M44 93 L52 98 L60 93 L52 88 Z" fill="#F0C060"/>
-          <circle cx="52" cy="93" r="3.5" fill="#C17F3E"/>
+          <path d="M44 93 L52 98 L60 93 L52 88 Z" fill="#D4A853"/>
+          <circle cx="52" cy="93" r="3.5" fill="#C8956A"/>
         </svg>
       </div>
 
@@ -1013,24 +1004,24 @@
         <div class="rsvp-success" id="rsvpSuccess">
           <div class="success-bear">
             <svg width="90" height="100" viewBox="0 0 130 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="30" cy="34" r="18" fill="#C17F3E"/>
-              <circle cx="30" cy="34" r="11" fill="#E8A96A"/>
-              <circle cx="100" cy="34" r="18" fill="#C17F3E"/>
-              <circle cx="100" cy="34" r="11" fill="#E8A96A"/>
-              <circle cx="65" cy="52" r="38" fill="#C17F3E"/>
-              <circle cx="65" cy="52" r="31" fill="#D4A870"/>
-              <ellipse cx="65" cy="65" rx="16" ry="12" fill="#E8A96A"/>
-              <ellipse cx="65" cy="59" rx="7" ry="5" fill="#7A4E2A"/>
-              <path d="M45 44 Q51 39 57 44" stroke="#2C1A0E" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-              <path d="M73 44 Q79 39 85 44" stroke="#2C1A0E" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-              <path d="M53 67 Q65 78 77 67" stroke="#7A4E2A" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-              <ellipse cx="65" cy="108" rx="33" ry="30" fill="#C17F3E"/>
-              <ellipse cx="65" cy="108" rx="23" ry="20" fill="#D4A870"/>
-              <ellipse cx="22" cy="100" rx="16" ry="10" fill="#C17F3E" transform="rotate(-35 22 100)"/>
-              <ellipse cx="108" cy="100" rx="16" ry="10" fill="#C17F3E" transform="rotate(35 108 100)"/>
-              <ellipse cx="48" cy="133" rx="14" ry="9" fill="#C17F3E"/>
-              <ellipse cx="82" cy="133" rx="14" ry="9" fill="#C17F3E"/>
-              <path d="M65 80 C65 80 75 72 80 78 C85 84 65 96 65 96 C65 96 45 84 50 78 C55 72 65 80 65 80Z" fill="#F0C060"/>
+              <circle cx="30" cy="34" r="18" fill="#C8956A"/>
+              <circle cx="30" cy="34" r="11" fill="#A07040"/>
+              <circle cx="100" cy="34" r="18" fill="#C8956A"/>
+              <circle cx="100" cy="34" r="11" fill="#A07040"/>
+              <circle cx="65" cy="52" r="38" fill="#C8956A"/>
+              <circle cx="65" cy="52" r="31" fill="#E8D5A3"/>
+              <ellipse cx="65" cy="65" rx="16" ry="12" fill="#A07040"/>
+              <ellipse cx="65" cy="59" rx="7" ry="5" fill="#A07040"/>
+              <path d="M45 44 Q51 39 57 44" stroke="#163320" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+              <path d="M73 44 Q79 39 85 44" stroke="#163320" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+              <path d="M53 67 Q65 78 77 67" stroke="#A07040" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+              <ellipse cx="65" cy="108" rx="33" ry="30" fill="#C8956A"/>
+              <ellipse cx="65" cy="108" rx="23" ry="20" fill="#E8D5A3"/>
+              <ellipse cx="22" cy="100" rx="16" ry="10" fill="#C8956A" transform="rotate(-35 22 100)"/>
+              <ellipse cx="108" cy="100" rx="16" ry="10" fill="#C8956A" transform="rotate(35 108 100)"/>
+              <ellipse cx="48" cy="133" rx="14" ry="9" fill="#C8956A"/>
+              <ellipse cx="82" cy="133" rx="14" ry="9" fill="#C8956A"/>
+              <path d="M65 80 C65 80 75 72 80 78 C85 84 65 96 65 96 C65 96 45 84 50 78 C55 72 65 80 65 80Z" fill="#D4A853"/>
             </svg>
           </div>
           <h3 class="success-title">You're on the list! 🍯</h3>
@@ -1042,17 +1033,17 @@
           <p class="rsvp-deadline">Kindly respond by <strong>July 10th</strong></p>
 
           <div class="form-group">
-            <label for="fname">Full Name <span style="color:#E8A96A">*</span></label>
+            <label for="fname">Full Name <span style="color:#E8C97A">*</span></label>
             <input type="text" id="fname" name="name" placeholder="Your full name" required autocomplete="name"/>
           </div>
 
           <div class="form-group">
-            <label for="femail">Email Address <span style="color:#E8A96A">*</span></label>
+            <label for="femail">Email Address <span style="color:#E8C97A">*</span></label>
             <input type="email" id="femail" name="email" placeholder="you@example.com" required autocomplete="email"/>
           </div>
 
           <div class="form-group">
-            <label>Will you be attending? <span style="color:#E8A96A">*</span></label>
+            <label>Will you be attending? <span style="color:#E8C97A">*</span></label>
             <div class="radio-group">
               <label class="radio-label">
                 <input type="radio" name="attending" value="Yes" required/>
@@ -1067,7 +1058,7 @@
 
           <div class="collapsible hidden" id="attendingFields">
             <div class="form-group">
-              <label for="fguests">Number of Guests Attending <span style="color:#E8A96A">*</span></label>
+              <label for="fguests">Number of Guests Attending <span style="color:#E8C97A">*</span></label>
               <input type="number" id="fguests" name="guests" min="1" max="6" placeholder="1" value="1"/>
             </div>
           </div>
@@ -1130,7 +1121,7 @@
     // =============================================
     (function generateBalloons() {
       const group = document.getElementById('balloonGroup');
-      const colors = ['#E8A96A','#C17F3E','#F0C060','#7A4E2A','#FDF0DC'];
+      const colors = ['#D4A853','#E8C97A','#E8D5A3','#7CAE8A','#D4A853'];
       const positions = [
         {left:'5%',top:'15%'},{left:'12%',top:'60%'},{left:'88%',top:'20%'},
         {left:'92%',top:'65%'},{left:'50%',top:'5%'},{left:'25%',top:'10%'},
