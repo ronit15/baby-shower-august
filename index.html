@@ -1051,31 +1051,31 @@
 
         <!-- Success state -->
         <div class="rsvp-success" id="rsvpSuccess">
-          <div class="success-bear">
-            <svg width="90" height="100" viewBox="0 0 130 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="30" cy="34" r="18" fill="#C8956A"/>
-              <circle cx="30" cy="34" r="11" fill="#A07040"/>
-              <circle cx="100" cy="34" r="18" fill="#C8956A"/>
-              <circle cx="100" cy="34" r="11" fill="#A07040"/>
-              <circle cx="65" cy="52" r="38" fill="#C8956A"/>
-              <circle cx="65" cy="52" r="31" fill="#E8D5A3"/>
-              <ellipse cx="65" cy="65" rx="16" ry="12" fill="#A07040"/>
-              <ellipse cx="65" cy="59" rx="7" ry="5" fill="#A07040"/>
-              <path d="M45 44 Q51 39 57 44" stroke="#163320" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-              <path d="M73 44 Q79 39 85 44" stroke="#163320" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-              <path d="M53 67 Q65 78 77 67" stroke="#A07040" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-              <ellipse cx="65" cy="108" rx="33" ry="30" fill="#C8956A"/>
-              <ellipse cx="65" cy="108" rx="23" ry="20" fill="#E8D5A3"/>
-              <ellipse cx="22" cy="100" rx="16" ry="10" fill="#C8956A" transform="rotate(-35 22 100)"/>
-              <ellipse cx="108" cy="100" rx="16" ry="10" fill="#C8956A" transform="rotate(35 108 100)"/>
-              <ellipse cx="48" cy="133" rx="14" ry="9" fill="#C8956A"/>
-              <ellipse cx="82" cy="133" rx="14" ry="9" fill="#C8956A"/>
-              <path d="M65 80 C65 80 75 72 80 78 C85 84 65 96 65 96 C65 96 45 84 50 78 C55 72 65 80 65 80Z" fill="#D4A853"/>
-            </svg>
-          </div>
-          <h3 class="success-title">You're on the list! 🍯</h3>
-          <p class="success-msg">Thank you for RSVP-ing! We can't wait to celebrate with you.<br/><br/>Krishna &amp; Ronit are so grateful for your love and support. See you on August 2nd! 🐻</p>
+        <div class="success-bear" id="successBear">
+          <svg width="90" height="100" viewBox="0 0 130 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="30" cy="34" r="18" fill="#C8956A"/>
+            <circle cx="30" cy="34" r="11" fill="#A07040"/>
+            <circle cx="100" cy="34" r="18" fill="#C8956A"/>
+            <circle cx="100" cy="34" r="11" fill="#A07040"/>
+            <circle cx="65" cy="52" r="38" fill="#C8956A"/>
+            <circle cx="65" cy="52" r="31" fill="#E8D5A3"/>
+            <ellipse cx="65" cy="65" rx="16" ry="12" fill="#A07040"/>
+            <ellipse cx="65" cy="59" rx="7" ry="5" fill="#A07040"/>
+            <path d="M45 44 Q51 39 57 44" stroke="#163320" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+            <path d="M73 44 Q79 39 85 44" stroke="#163320" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+            <path d="M53 67 Q65 78 77 67" stroke="#A07040" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+            <ellipse cx="65" cy="108" rx="33" ry="30" fill="#C8956A"/>
+            <ellipse cx="65" cy="108" rx="23" ry="20" fill="#E8D5A3"/>
+            <ellipse cx="22" cy="100" rx="16" ry="10" fill="#C8956A" transform="rotate(-35 22 100)"/>
+            <ellipse cx="108" cy="100" rx="16" ry="10" fill="#C8956A" transform="rotate(35 108 100)"/>
+            <ellipse cx="48" cy="133" rx="14" ry="9" fill="#C8956A"/>
+            <ellipse cx="82" cy="133" rx="14" ry="9" fill="#C8956A"/>
+            <path d="M65 80 C65 80 75 72 80 78 C85 84 65 96 65 96 C65 96 45 84 50 78 C55 72 65 80 65 80Z" fill="#D4A853"/>
+          </svg>
         </div>
+  <h3 class="success-title" id="successTitle"></h3>
+  <p class="success-msg" id="successMsg"></p>
+</div>
 
         <!-- Form -->
         <form id="rsvpForm" novalidate class="rsvp-form-inner">
@@ -1311,6 +1311,13 @@
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload)
         });
+        const attending = document.querySelector('input[name="attending"]:checked');
+        const isYes = attending?.value === 'Yes';
+        document.getElementById('successTitle').textContent = isYes ? "You're on the list! 🍯" : "We'll miss you! 💛";
+        document.getElementById('successMsg').innerHTML = isYes
+          ? "Thank you for RSVP-ing! We can't wait to celebrate with you.<br/><br/>Krishna & Ronit are so grateful for your love and support. See you on August 2nd! 🐻"
+          : "Thank you for letting us know. We'll miss you and hope to celebrate with you soon. 💛";
+        document.getElementById('successBear').style.display = isYes ? 'block' : 'none';
         form.style.display = 'none';
         successEl.classList.add('visible');
       } catch (err) {
